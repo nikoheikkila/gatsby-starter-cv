@@ -54,8 +54,9 @@ module.exports = {
       },
       occupation: "Lead Developer",
       description: `
-      Leading a highly skilled development team focused on building modern Laravel
+      I'm leading a highly skilled development team focused on building modern Laravel
       microservices to provide a platform for online payments and merchant services.
+      I'm also actively involved in hiring and onboarding of new developers.
       `
     }, {
       company: "University of Jyväskylä",
@@ -65,7 +66,7 @@ module.exports = {
       },
       occupation: "Technical Lead",
       description: `
-      Lead a development project aiming to provide a gamified e-learning platform
+      I led a development project aiming to provide a gamified e-learning platform
       built with Flask, Docker, and Angular for university students and teachers.
       `
     }, {
@@ -89,7 +90,7 @@ module.exports = {
       },
       occupation: "Guest Lecturer",
       description: `
-      Lectured about advanced PHP and Zend Framework software development.
+      I lectured about advanced PHP and Zend Framework software development.
       `
     },
     {
@@ -100,7 +101,7 @@ module.exports = {
       },
       occupation: "System Designer (Internship)",
       description: `
-      Created a requirement specifications for StepIT project which was Web 2.0 community portal aimed for collaboration between university alumni and employers.
+      I co-wrote a requirement specifications for StepIT project which was a Web 2.0 community portal aimed for collaboration between university alumni and employers.
       `
     },
     {
@@ -111,7 +112,7 @@ module.exports = {
       },
       occupation: "Software Developer (Internship)",
       description: `
-      PHP and Zend Framework platform development for open source MassIdea.org platform coordinated by Laurea University of Applied Sciences.
+      I worked on a Zend Framework platform development for open source MassIdea.org platform coordinated by Laurea University of Applied Sciences.
       `
     },
   ],
