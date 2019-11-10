@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { FaGithub } from "react-icons/fa"
+import { FaGithub, FaPen } from 'react-icons/fa'
 import siteConfig from '../../../data/siteConfig'
 
 const HeaderWrapper = styled.header`
@@ -12,7 +12,7 @@ const HeaderWrapper = styled.header`
   display: block;
   width: 100%;
   z-index: 1000;
-  background-color: #25303B;
+  background-color: #25303b;
 `
 
 const HeaderNav = styled.nav`
@@ -26,13 +26,13 @@ const HeaderNav = styled.nav`
   justify-content: space-between;
   overflow-x: auto;
   overflow-y: hidden;
-  background-color: #25303B;
+  background-color: #25303b;
 `
 
 const HeaderLinkGroup = styled.div`
   display: flex;
   flex-direction: row;
-` 
+`
 
 const HeaderLink = styled(Link)`
   position: relative;
@@ -49,10 +49,10 @@ const HeaderLink = styled(Link)`
   z-index: 10;
 `
 const GithubLink = styled(({ className }) => (
-  <a 
+  <a
     className={className}
     href={`https://github.com/${siteConfig.githubUsername}`}
-    target='_blank'
+    target="_blank"
     rel="noopener noreferrer"
   >
     <FaGithub size={32} />
@@ -71,8 +71,29 @@ const GithubLink = styled(({ className }) => (
   z-index: 10;
 `
 
+const BlogLink = styled(({ className }) => (
+  <a
+    className={className}
+    href="https://nikoheikkila.fi"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaPen size={28} />
+  </a>
+))`
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 36px;
+  z-index: 10;
+`
+
 class Header extends React.Component {
-  render () {
+  render() {
     const { headerLinks } = siteConfig
 
     return (
@@ -85,7 +106,10 @@ class Header extends React.Component {
               </HeaderLink>
             ))}
           </HeaderLinkGroup>
-          <GithubLink />
+          <HeaderLinkGroup>
+            <BlogLink />
+            <GithubLink />
+          </HeaderLinkGroup>
         </HeaderNav>
       </HeaderWrapper>
     )

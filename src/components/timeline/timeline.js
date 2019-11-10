@@ -6,25 +6,31 @@ import siteConfig from '../../../data/siteConfig'
 const Timeline = ({ className }) => {
   return (
     <div className={className}>
-      <h1>Experience</h1>
-      {siteConfig.jobs && siteConfig.jobs.map(job => (
-        <article key={job.begin.month + job.begin.year} className='timeline__item'>
-          <div className="inner">
-            <span className="timeline__date">
-              <span className="timeline__month">{job.begin.month}</span>
-              <span className="timeline__year">{job.begin.year}</span>
-            </span>
-            <h2 className='timeline__title'>{job.occupation} at {job.company} <br /><small className='timeline__title--small'>({job.duration || 'present'})</small></h2>
-            <p>{job.description}</p>
-          </div>
-        </article>
-      ))}
+      <h2>Experience</h2>
+      {siteConfig.jobs &&
+        siteConfig.jobs.map((job, i) => (
+          <article
+            key={job.begin.month + job.begin.year}
+            className="timeline__item"
+          >
+            <div className="inner">
+              <span className="timeline__date">
+                <span className="timeline__month">{job.begin.month}</span>
+                <span className="timeline__year">{job.begin.year}</span>
+              </span>
+              <h2 className="timeline__title">
+                {job.occupation} at {job.company} <br />
+                {i === 0 && <small>(Current)</small>}
+              </h2>
+              <p>{job.description}</p>
+            </div>
+          </article>
+        ))}
     </div>
   )
 }
 
 export default styled(Timeline)`
-
   position: relative;
   :before {
     content: '';
@@ -35,7 +41,7 @@ export default styled(Timeline)`
     margin: 70px 0 0 -1px;
     width: 1px;
     height: calc(100% - 70px);
-    background: #25303B;
+    background: #25303b;
   }
   .timeline__item {
     width: 100%;
@@ -52,7 +58,7 @@ export default styled(Timeline)`
     float: left;
     margin: 85px 0 0 0;
     border-radius: 6px;
-    border: 1px solid #25303B;
+    border: 1px solid #25303b;
   }
   .timeline__date {
     display: block;
@@ -66,7 +72,7 @@ export default styled(Timeline)`
     font-size: 12px;
     font-weight: 900;
     text-transform: uppercase;
-    background: #25303B;
+    background: #25303b;
     color: #fff;
     box-shadow: 0 0 0 7px #fff;
   }
@@ -95,7 +101,7 @@ export default styled(Timeline)`
     position: absolute;
     top: -5px;
     left: 30%;
-    width: 10px; 
+    width: 10px;
     height: 10px;
     transform: rotate(-45deg);
   }
@@ -107,14 +113,14 @@ export default styled(Timeline)`
     color: #656565;
     border-radius: 0 0 6px 6px;
   }
-  .timeline__item:nth-child(2n+2) div.inner {
+  .timeline__item:nth-child(2n + 2) div.inner {
     float: right;
   }
   .timeline__title {
-    background: #25303B;
+    background: #25303b;
   }
   .timeline__title:after {
-    background: #25303B;
+    background: #25303b;
   }
 
   .timeline__title--small {

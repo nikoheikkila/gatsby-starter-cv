@@ -1,58 +1,77 @@
-import React from "react";
-import jsonFetch from "simple-json-fetch";
+import React from 'react'
+import jsonFetch from 'simple-json-fetch'
 import styled from 'styled-components'
 import siteConfig from '../../../data/siteConfig'
-
 import Loader from '../loader'
 
-const endpoint =
-  `https://api.github.com/users/${siteConfig.githubUsername}/repos?type=owner&sort=updated&per_page=5&page=1`
-
+const endpoint = `https://api.github.com/users/${siteConfig.githubUsername}/repos?type=public&sort=updated&per_page=10&page=1`
 
 class Repositories extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       repos: [],
-      status: 'loading'
+      status: 'loading',
     }
   }
-  async componentDidMount () {
-    const repos = await jsonFetch(endpoint);
-    if (repos.json && repos.json.length) {
+  async componentDidMount() {
+    let repos
+
+    try {
+      repos = await jsonFetch(endpoint)
+    } catch (err) {
+      console.error(`Unable to load repositories. Reason: ${err}`)
+    }
+
+    if (repos.json && repos.json.length > 0) {
       this.setState({ repos: repos.json, status: 'ready' })
     }
   }
-  render () {
+  render() {
     const { status } = this.state
     return (
       <div className={this.props.className}>
-        <h2>Latest repositories on Github</h2>
-        {status === "loading" && <div className='repositories__loader'><Loader /></div>}
-        {status === "ready" &&
-          this.state.repos && (
-            <React.Fragment>
-              <div className="repositories__content">
-                {this.state.repos.map(repo => (
+        <h2>Selected Works</h2>
+        {status === 'loading' && (
+          <div className="repositories-loader">
+            <Loader />
+          </div>
+        )}
+        {status === 'ready' && this.state.repos && (
+          <React.Fragment>
+            <div className="repositories-content">
+              {this.state.repos
+                .filter(repo => !repo.fork)
+                .sort(
+                  (repo1, repo2) =>
+                    repo2.stargazers_count - repo1.stargazers_count
+                )
+                .map(repo => (
                   <React.Fragment key={repo.name}>
-                    <div className="repositories__repo">
-                      <a className='repositories__repo-link' href={repo.html_url}>
-                        <strong>{repo.name}</strong>
+                    <div className="repositories-repo">
+                      <a
+                        className="repositories-repo-link"
+                        href={repo.html_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {repo.name}
                       </a>
                       <div>{repo.description}</div>
-                      <div className="repositories__repo-date">
-                        Updated: {new Date(repo.updated_at).toUTCString()}
+                      <div className="repositories-repo-date">
+                        Last Updated:{' '}
+                        {new Date(repo.updated_at).toLocaleString(['en', 'fi'])}
                       </div>
-                      <div className="repositories__repo-star">
-                        ★ {repo.stargazers_count}
+                      <div className="repo-stargazers">
+                        ⭐ {repo.stargazers_count}
                       </div>
                     </div>
                     <hr />
                   </React.Fragment>
                 ))}
-              </div>
-            </React.Fragment>
-          )}
+            </div>
+          </React.Fragment>
+        )}
       </div>
     )
   }
@@ -60,37 +79,37 @@ class Repositories extends React.Component {
 
 export default styled(Repositories)`
   position: relative;
-  .repositories__content {
+  .repositories-content {
     margin-bottom: 40px;
   }
 
-  .repositories__repo {
+  .repositories-repo {
     position: relative;
   }
 
-  .repositories__repo-link {
+  .repositories-repo-link {
+    font-weight: 700;
     text-decoration: none;
-    color: #25303B;
+    color: #25303b;
   }
 
-  .repositories__repo-date {
+  .repositories-repo-date {
     color: #bbb;
     font-size: 10px;
   }
 
-  .repositories__repo-star {
+  .repo-stargazers {
     position: absolute;
     top: 0;
     right: 0;
+    font-weight: 700;
   }
 
-  .repositories__loader {
+  .repositories-loader {
     display: flex;
   }
 
   hr {
     margin-top: 16px;
   }
-
 `
-

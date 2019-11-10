@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { withPrefix } from 'gatsby'
 import siteConfig from '../../../data/siteConfig'
 import styled from 'styled-components'
@@ -23,11 +23,13 @@ const TitleContainer = styled.div`
 const HeroTitle = styled.h1`
   font-weight: 700;
   font-size: 3rem;
-  margin: 10px 60px;
+  margin: 0 auto;
+  max-width: 35%;
+  background: rgba(100, 100, 100, 0.25);
+  padding: 15px 10px;
   color: #fff;
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
 `
-
 class Hero extends React.Component {
   render() {
     const { title, className } = this.props
@@ -43,8 +45,8 @@ class Hero extends React.Component {
 }
 
 export default styled(Hero)`
-  
-  ${p => `background-image: url(${p.heroImg || withPrefix(siteConfig.siteCover)});`}
+  ${p =>
+    `background-image: url(${p.heroImg || withPrefix(siteConfig.siteCover)});`}
   height: 70vh;
   background-attachment: fixed;
   background-position: center;

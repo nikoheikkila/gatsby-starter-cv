@@ -1,83 +1,116 @@
 module.exports = {
-  siteTitle: 'Hi! I\'m Francisco!',
-  siteDescription: `Create your online curriculum in just a few minutes with this starter`,
-  keyWords: ['gatsbyjs', 'react', 'curriculum'],
-  authorName: 'Francisco Santos',
-  twitterUsername: '_franciscodf',
-  githubUsername: 'santosfrancisco',
-  authorAvatar: '/images/avatar.jpeg',
-  authorDescription: `Developer, passionate about what I do. Always interested in how the sites were made, I started to study HTML by hobby. <br />
-    In 2012 I started working as a support technician and I approached the developers.
-    In 2015, I started to study C # and started to contribute with the team giving maintenance in an application in C # and .NET. <br />
-    I currently work as a frontend developer and mainly work with <strong>Javascript, NodeJS e React.</strong>`,
+  siteTitle: `Hi, I'm Niko! ☕`,
+  siteDescription: 'My CV',
+  keyWords: ['developer', 'curriculum'],
+  authorName: 'Niko Heikkilä',
+  githubUsername: 'nikoheikkila',
+  authorAvatar: '/images/avatar.jpg',
+  authorDescription: `
+  <p>...and I have a strong devotion towards
+  DevOps, microservices, functional programming, and team leading.</p>
+  `,
   skills: [
     {
-      name: 'HTML',
-      level: 70
+      name: 'DevOps',
+      level: 85
     },
     {
-      name: 'CSS',
-      level: 60
+      name: 'Team Leadership',
+      level: 95
     },
     {
-      name: 'Javascript',
-      level: 50
+      name: 'CI / CD',
+      level: 80
     },
     {
-      name: 'NodeJs',
-      level: 40
+      name: 'Software Architecture & Design',
+      level: 88
     },
     {
-      name: 'React',
-      level: 60
+      name: 'Communication',
+      level: 93
     },
-    {
-      name: 'Git',
-      level: 70
-    }
   ],
   jobs: [
     {
-      company: "Lendico",
+      company: "Paytrail",
       begin: {
-        month: 'apr',
-        year: '2018'
-      },
-      duration: null,
-      occupation: "Frontend developer",
-      description: "I integrate the Frontend team responsible for developing and maintaining the online lending platform."
-  
-    }, {
-      company: "Anapro",
-      begin: {
-        month: 'dec',
+        month: 'Nov',
         year: '2016'
       },
-      duration: '1 yr e 5 mos',
-      occupation: "Fullstack developer",
-      description: "Development and maintenance, corrective and preventive, of web applications for the real estate market."
+      occupation: "Lead Developer",
+      description: `
+      Leading a highly skilled development team focused on building modern Laravel
+      microservices to provide a platform for online payments and merchant services.
+      `
     }, {
-      company: "Anapro",
+      company: "University of Jyväskylä",
       begin: {
-        month: 'set',
-        year: '2012'
+        month: 'Jan',
+        year: '2016'
       },
-      duration: '4 yrs e 3 mos',
-      occupation: "Support Technician",
-      description: "Responsible for the implementation and parameterization of the system, training and customer support. Acting also in person in real estate launches guaranteeing the success and good use of the tool."
-  
+      occupation: "Technical Lead",
+      description: `
+      Lead a development project aiming to provide a gamified e-learning platform
+      built with Flask, Docker, and Angular for university students and teachers.
+      `
+    }, {
+      company: 'Elisa',
+      begin: {
+        month: 'Sep',
+        year: '2011'
+      },
+      occupation: "Service Specialist",
+      description: `
+      Troubleshooting and fault ticketing of Mobile-, ISP-, xDSL-, IPTV- &
+      nPVR-services. Additionally, job involved product reselling and customer
+      relationships management concerning Elisa and Saunalahti products.
+      `
     },
-    /* ... */
+    {
+      company: 'Centria University of Applied Sciences',
+      begin: {
+        month: 'Oct',
+        year: '2010'
+      },
+      occupation: "Guest Lecturer",
+      description: `
+      Lectured about advanced PHP and Zend Framework software development.
+      `
+    },
+    {
+      company: 'Centria University of Applied Sciences',
+      begin: {
+        month: 'Jun',
+        year: '2010'
+      },
+      occupation: "System Designer (Internship)",
+      description: `
+      Created a requirement specifications for StepIT project which was Web 2.0 community portal aimed for collaboration between university alumni and employers.
+      `
+    },
+    {
+      company: 'Centria University of Applied Sciences',
+      begin: {
+        month: 'May',
+        year: '2009'
+      },
+      occupation: "Software Developer (Internship)",
+      description: `
+      PHP and Zend Framework platform development for open source MassIdea.org platform coordinated by Laurea University of Applied Sciences.
+      `
+    },
   ],
   social: {
-    twitter: "https://twitter.com/_franciscodf",
-    linkedin: "https://www.linkedin.com/in/santos-francisco",
-    github: "https://github.com/santosfrancisco",
-    email: "yoshi.df@gmail.com"
+    mastodon: "https://mastodon.technology/@nikoheikkila",
+    linkedin: "https://www.linkedin.com/in/nikoheikkila",
+    github: "https://github.com/nikoheikkila",
+    telegram: "https://t.me/nikoheikkila",
+    email: "yo@nikoheikkila.fi"
   },
-  siteUrl: 'https://santosfrancisco.github.io/gatsbystarter-cv',
-  pathPrefix: '/gatsby-starter-cv', // Note: it must *not* have a trailing slash.
-  siteCover: '/images/cover.jpeg',
+  siteUrl: 'https://cv.nikoheikkila.fi',
+  pathPrefix: '',
+  siteCover: '/images/mechanical.jpg',
   googleAnalyticsId: 'UA-000000000-1',
   background_color: '#ffffff',
   theme_color: '#25303B',
@@ -85,8 +118,8 @@ module.exports = {
   icon: 'src/assets/gatsby-icon.png',
   headerLinks: [
     {
-      label: 'Francisco Santos',
+      label: 'Top',
       url: '/',
-    }
+    },
   ]
 }
