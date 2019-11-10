@@ -14,7 +14,7 @@ const Moniker = ({ titles, interval = 3000 }) => {
   }, interval)
 
   const titleStyle = {
-    maxWidth: '75%',
+    maxWidth: '100%',
     lineHeight: '1.5em',
     color: '#222',
     background: '#e8db3e',
@@ -22,9 +22,9 @@ const Moniker = ({ titles, interval = 3000 }) => {
   }
 
   return (
-    <h2 style={{ textAlign: 'center' }}>
+    <p style={{ textAlign: 'center', fontWeight: 700 }}>
       I am <span style={titleStyle}>{title}</span>
-    </h2>
+    </p>
   )
 }
 

@@ -24,7 +24,6 @@ const HeroTitle = styled.h1`
   font-weight: 700;
   font-size: 3rem;
   margin: 0 auto;
-  max-width: 35%;
   background: rgba(100, 100, 100, 0.25);
   padding: 15px 10px;
   color: #fff;
