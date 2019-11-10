@@ -1,17 +1,17 @@
 module.exports = {
-  siteTitle: `Hi, I'm Niko! ☕`,
+  siteTitle: `Hi, I'm Niko ☕`,
   siteDescription: 'My CV',
   keyWords: ['developer', 'curriculum'],
   authorName: 'Niko Heikkilä',
   githubUsername: 'nikoheikkila',
   authorAvatar: '/images/avatar.jpg',
   authorDescription: `
-  ...and I have a strong devotion towards
-  DevOps, microservices, functional programming, and team leading.
+  ...and I make world a better place with well-crafted software.
+  Take a look at my work, read my blog, and get in touch.
   `,
   skills: [
     {
-      name: 'DevOps',
+      name: 'DevOps Culture',
       level: 85
     },
     {
@@ -19,7 +19,7 @@ module.exports = {
       level: 95
     },
     {
-      name: 'CI / CD',
+      name: 'Continuous Integration & Delivery',
       level: 80
     },
     {
@@ -27,9 +27,23 @@ module.exports = {
       level: 88
     },
     {
-      name: 'Communication',
-      level: 93
+      name: 'Effective Communication',
+      level: 82
     },
+  ],
+  education: [
+    {
+      institute: 'University of Jyväskylä',
+      degree: 'Master of Science',
+      begin: '2014',
+      end: '2016'
+    },
+    {
+      institute: 'Centria University of Applied Sciences',
+      degree: 'Bachelor of Engineering',
+      begin: '2007',
+      end: '2012'
+    }
   ],
   jobs: [
     {
@@ -102,6 +116,7 @@ module.exports = {
     },
   ],
   social: {
+    devto: "https://dev.to/nikoheikkila",
     mastodon: "https://mastodon.technology/@nikoheikkila",
     linkedin: "https://www.linkedin.com/in/nikoheikkila",
     github: "https://github.com/nikoheikkila",
@@ -111,7 +126,6 @@ module.exports = {
   siteUrl: 'https://cv.nikoheikkila.fi',
   pathPrefix: '',
   siteCover: '/images/mechanical.jpg',
-  googleAnalyticsId: 'UA-000000000-1',
   background_color: '#ffffff',
   theme_color: '#25303B',
   display: 'minimal-ui',

@@ -6,14 +6,14 @@ export default ({ title = 'Skills', skills = [] }) => {
     <Fragment>
       <h2>{title}</h2>
       {skills
-        .filter(skill => skill.level > 0)
+        .filter(({ level }) => level > 0 && level <= 100)
         .sort((skill1, skill2) => skill2.level - skill1.level)
-        .map(skill => (
+        .map(({ name, level }, i) => (
           <SkillBar
             className="skills"
-            key={skill.name}
-            name={skill.name}
-            level={skill.level}
+            key={`skill-${i + 1}`}
+            name={name}
+            level={level}
           />
         ))}
     </Fragment>

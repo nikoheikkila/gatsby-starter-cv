@@ -7,6 +7,7 @@ import {
   FaEnvelope,
   FaMastodon,
   FaTelegram,
+  FaDev,
 } from 'react-icons/fa'
 import siteConfig from '../../data/siteConfig'
 
@@ -18,6 +19,7 @@ import About from '../components/about'
 import Skills from '../components/skills'
 import Timeline from '../components/timeline'
 import Repositories from '../components/repositories'
+import Education from '../components/education'
 
 const Separator = styled.hr`
   margin-top: 24px;
@@ -26,19 +28,22 @@ const Separator = styled.hr`
 
 class Home extends React.Component {
   render() {
-    if (siteConfig.googleAnalyticsId === 'UA-000000000-1') {
-      console.warn(
-        'WARNING: Please set a proper googleAnalyticsId. See https://analytics.google.com for details.'
-      )
-    }
+    const {
+      siteTitle: title,
+      siteCover,
+      authorAvatar,
+      keywords,
+      social,
+      authorDescription,
+      skills,
+      education,
+    } = siteConfig
 
-    const title = siteConfig.siteTitle
-    const { keywords } = siteConfig
     return (
       <Layout location={this.props.location}>
         <SEO title={title} keywords={keywords} />
 
-        <Hero heroImg={siteConfig.siteCover} title={title} />
+        <Hero heroImg={siteCover} title={title} />
 
         <Wrapper className={this.props.className}>
           <Container className="page-content" fluid>
@@ -46,54 +51,64 @@ class Home extends React.Component {
               <Col xs={4} className="avatar">
                 <img
                   className="avatar__image"
-                  src={siteConfig.authorAvatar}
+                  src={authorAvatar}
                   alt="user avatar"
                 />
                 <div className="social">
-                  {siteConfig.social.github && (
+                  {social.devto && (
+                    <a
+                      className="social-link devto"
+                      href={social.devto}
+                      target="_blank"
+                      rel="me noopener noreferrer"
+                    >
+                      <FaDev className="social-icon" size="32" />
+                    </a>
+                  )}
+                  {social.github && (
                     <a
                       className="social-link github"
-                      href={siteConfig.social.github}
+                      href={social.github}
                       target="_blank"
                       rel="me noopener noreferrer"
                     >
                       <FaGithub className="social-icon" size="32" />
                     </a>
                   )}
-                  {siteConfig.social.mastodon && (
+                  {social.mastodon && (
                     <a
                       className="social-link mastodon"
-                      href={siteConfig.social.mastodon}
+                      href={social.mastodon}
                       target="_blank"
                       rel="me noopener noreferrer"
                     >
                       <FaMastodon className="social-icon" size="32" />
                     </a>
                   )}
-                  {siteConfig.social.linkedin && (
+                  {social.linkedin && (
                     <a
                       className="social-link linkedin"
-                      href={siteConfig.social.linkedin}
+                      href={social.linkedin}
                       target="_blank"
                       rel="me noopener noreferrer"
                     >
                       <FaLinkedin className="social-icon" size="32" />
                     </a>
                   )}
-                  {siteConfig.social.telegram && (
+                  {social.telegram && (
                     <a
                       className="social-link telegram"
-                      href={siteConfig.social.telegram}
+                      href={social.telegram}
                       target="_blank"
                       rel="me noopener noreferrer"
                     >
                       <FaTelegram className="social-icon" size="32" />
                     </a>
                   )}
-                  {siteConfig.social.email && (
+                  {social.email && (
                     <a
                       className="social-link email"
-                      href={`mailto:${siteConfig.social.email}`}
+                      href={`mailto:${social.email}`}
                       target="_blank"
                       rel="me noopener noreferrer"
                     >
@@ -104,22 +119,36 @@ class Home extends React.Component {
               </Col>
             </Row>
             <Row>
+              <Col xs={10} sm={10}>
+                <About title="Story" text={authorDescription} />
+              </Col>
+            </Row>
+            <Separator />
+            <Row>
               <Col xs={4} sm={4}>
-                <About title="Story" text={siteConfig.authorDescription} />
+                <Education title="Education" degrees={education} />
               </Col>
               <Col xs={4} sm={4}>
-                <Skills title="Skills" skills={siteConfig.skills} />
+                <Skills title="Core Skills" skills={skills} />
               </Col>
             </Row>
             <Separator />
             <Timeline />
             <Separator />
             <Repositories />
+            <Separator />
             <Row>
-              <Col xs={12} sm={12}>
+              <Col xs={3} sm={3}>
                 <p className="follow-up">
-                  Want to work with me? Send me a{' '}
-                  <a href={siteConfig.social.telegram}>message</a>.
+                  Psst. Want to work with me? Send me a{' '}
+                  <a href={social.telegram}>message</a>.
+                </p>
+              </Col>
+              <Col xs={5} sm={5}>
+                <p className="copyright">
+                  &copy; Niko Heikkilä
+                  <br />
+                  Made with ❤ and Gatsby
                 </p>
               </Col>
             </Row>
@@ -160,7 +189,10 @@ export default styled(Home)`
 
   p.follow-up {
     font-style: italic;
-    text-align: center;
+  }
+
+  p.copyright {
+    text-align: right;
   }
 
   a.social-link.twitter:hover {

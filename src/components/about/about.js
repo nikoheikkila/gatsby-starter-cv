@@ -14,16 +14,17 @@ const Moniker = ({ titles, interval = 3000 }) => {
   }, interval)
 
   const titleStyle = {
-    lineHeight: '1.75em',
+    maxWidth: '75%',
+    lineHeight: '1.5em',
     color: '#222',
     background: '#e8db3e',
     padding: '8px 12px',
   }
 
   return (
-    <h3>
+    <h2 style={{ textAlign: 'center' }}>
       I am <span style={titleStyle}>{title}</span>
-    </h3>
+    </h2>
   )
 }
 
@@ -33,13 +34,14 @@ export default ({ text = '' }) => {
       <Moniker
         titles={[
           'a coder',
+          'a blogger',
           'a web developer',
           'a software craftsman',
-          'a caffeine addict',
+          'a coffee lover',
           'an impeccable geek',
         ]}
       />
-      <p>{text}</p>
+      <p style={{ textAlign: 'center' }}>{text}</p>
     </Fragment>
   )
 }
