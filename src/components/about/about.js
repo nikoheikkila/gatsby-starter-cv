@@ -32,13 +32,14 @@ export default ({ text = '' }) => {
     <Fragment>
       <Moniker
         titles={[
+          'a coder',
           'a web developer',
           'a software craftsman',
           'a caffeine addict',
           'an impeccable geek',
         ]}
       />
-      <p dangerouslySetInnerHTML={{ __html: text }}></p>
+      <p>{text}</p>
     </Fragment>
   )
 }

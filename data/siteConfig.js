@@ -6,8 +6,8 @@ module.exports = {
   githubUsername: 'nikoheikkila',
   authorAvatar: '/images/avatar.jpg',
   authorDescription: `
-  <p>...and I have a strong devotion towards
-  DevOps, microservices, functional programming, and team leading.</p>
+  ...and I have a strong devotion towards
+  DevOps, microservices, functional programming, and team leading.
   `,
   skills: [
     {

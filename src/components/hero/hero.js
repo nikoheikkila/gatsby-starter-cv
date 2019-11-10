@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React from 'react'
 import { withPrefix } from 'gatsby'
 import siteConfig from '../../../data/siteConfig'
 import styled from 'styled-components'

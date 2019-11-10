@@ -63,7 +63,10 @@ class Repositories extends React.Component {
                         {new Date(repo.updated_at).toLocaleString(['en', 'fi'])}
                       </div>
                       <div className="repo-stargazers">
-                        ⭐ {repo.stargazers_count}
+                        <span role="img" aria-label="stars">
+                          ⭐
+                        </span>{' '}
+                        {repo.stargazers_count}
                       </div>
                     </div>
                     <hr />
