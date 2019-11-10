@@ -1,0 +1,49 @@
+{
+    "version": 2,
+    "name": "cv.nikoheikkila.fi",
+    "alias": [
+        "cv.nikoheikkila.fi"
+    ],
+    "regions": [
+        "all"
+    ],
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@now/static-build",
+            "config": {
+                "distDir": "public"
+            }
+        }
+    ],
+    "build": {},
+    "routes": [
+        {
+            "src": "/static/(.*)",
+            "dest": "/static/$1",
+            "headers": {
+                "cache-control": "public, s-maxage=31536000, max-age=0"
+            }
+        },
+        {
+            "src": "/(.*[^sw]\\.(js|json|css|ico|jpg|png)$)",
+            "dest": "/$1",
+            "headers": {
+                "cache-control": "public, s-maxage=31536000, max-age=0"
+            }
+        },
+        {
+            "src": "/sw.js",
+            "headers": {
+                "cache-control": "public, s-maxage=0, max-age=0, must-revalidate"
+            }
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/$1",
+            "headers": {
+                "cache-control": "public, s-maxage=1, max-age=0, stale-while-revalidate"
+            }
+        }
+    ]
+}
