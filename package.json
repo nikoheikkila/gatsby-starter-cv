@@ -2,50 +2,51 @@
   "name": "gatsby-starter-cv",
   "private": true,
   "description": "A simple starter to get up and developing your digital curriculum with GatsbyJS",
-  "version": "0.0.1",
-  "author": "Francisco Santos <yoshi.df@gmail.com>",
+  "version": "1.0.0",
+  "author": "Niko Heikkilä <yo@nikoheikkila.fi>",
   "dependencies": {
-    "babel-plugin-styled-components": "1.10.0",
-    "gatsby": "2.4.2",
-    "gatsby-image": "2.0.41",
-    "gatsby-plugin-google-analytics": "2.0.19",
-    "gatsby-plugin-manifest": "2.1.1",
-    "gatsby-plugin-offline": "2.1.0",
-    "gatsby-plugin-react-helmet": "3.0.12",
-    "gatsby-plugin-sharp": "2.0.36",
-    "gatsby-plugin-styled-components": "3.0.7",
-    "gatsby-source-filesystem": "2.0.33",
-    "gatsby-transformer-sharp": "2.1.19",
+    "babel-plugin-styled-components": "1.10.6",
+    "gatsby": "2.17.10",
+    "gatsby-image": "2.2.30",
+    "gatsby-plugin-google-analytics": "2.1.24",
+    "gatsby-plugin-manifest": "2.2.26",
+    "gatsby-plugin-offline": "3.0.18",
+    "gatsby-plugin-react-helmet": "3.1.13",
+    "gatsby-plugin-sharp": "2.2.36",
+    "gatsby-plugin-styled-components": "3.1.11",
+    "gatsby-source-filesystem": "2.1.35",
+    "gatsby-transformer-sharp": "2.3.2",
     "prop-types": "15.7.2",
-    "react": "16.8.6",
-    "react-awesome-styled-grid": "2.2.3",
-    "react-dom": "16.8.6",
+    "react": "16.11.0",
+    "react-awesome-styled-grid": "2.3.2",
+    "react-dom": "16.11.0",
     "react-helmet": "5.2.1",
-    "react-icons": "3.6.1",
+    "react-icons": "3.8.0",
     "simple-json-fetch": "1.0.1",
-    "styled-components": "4.2.0"
+    "styled-components": "4.4.1"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "cv",
+    "resume"
   ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "dev": "gatsby develop -p 5000",
+    "start": "yarn develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
-    "gh-pages": "2.0.1",
-    "prettier": "1.17.0"
+    "npm-check-updates": "^3.2.1",
+    "prettier": "1.19.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/santosfrancisco/gatsby-starter-cv"
+    "url": "https://github.com/nikoheikkila/gatsby-starter-cv"
   },
   "bugs": {
-    "url": "https://github.com/santosfrancisco/gatsby-starter-cv/issues"
+    "url": "https://github.com/nikoheikkila/gatsby-starter-cv/issues"
   }
 }
