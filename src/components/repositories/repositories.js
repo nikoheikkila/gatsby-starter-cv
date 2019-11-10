@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import siteConfig from '../../../data/siteConfig'
 import Loader from '../loader'
 
-const endpoint = `https://api.github.com/users/${siteConfig.githubUsername}/repos?type=public&sort=updated&per_page=10&page=1`
+const endpoint = `https://api.github.com/users/${siteConfig.githubUsername}/repos?type=public&sort=updated&per_page=50&page=1`
 
 class Repositories extends React.Component {
   constructor(props) {
@@ -41,7 +41,7 @@ class Repositories extends React.Component {
           <React.Fragment>
             <div className="repositories-content">
               {this.state.repos
-                .filter(repo => !repo.fork)
+                .filter(repo => !repo.fork && repo.stargazers_count > 0)
                 .sort(
                   (repo1, repo2) =>
                     repo2.stargazers_count - repo1.stargazers_count
