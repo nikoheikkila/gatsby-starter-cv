@@ -70,7 +70,11 @@ class Home extends React.Component {
                       href={social.github}
                       title="GitHub"
                     >
-                      <FaGithub className="social-icon" size="32" title="GitHub" />
+                      <FaGithub
+                        className="social-icon"
+                        size="32"
+                        title="GitHub"
+                      />
                     </a>
                   )}
                   {social.mastodon && (
@@ -79,7 +83,11 @@ class Home extends React.Component {
                       href={social.mastodon}
                       title="Mastodon"
                     >
-                      <FaMastodon className="social-icon" size="32" title="Mastodon" />
+                      <FaMastodon
+                        className="social-icon"
+                        size="32"
+                        title="Mastodon"
+                      />
                     </a>
                   )}
                   {social.linkedin && (
@@ -88,7 +96,11 @@ class Home extends React.Component {
                       href={social.linkedin}
                       title="LinkedIn"
                     >
-                      <FaLinkedin className="social-icon" size="32" title="LinkedIn" />
+                      <FaLinkedin
+                        className="social-icon"
+                        size="32"
+                        title="LinkedIn"
+                      />
                     </a>
                   )}
                   {social.telegram && (
@@ -97,7 +109,11 @@ class Home extends React.Component {
                       href={social.telegram}
                       title="Telegram"
                     >
-                      <FaTelegram className="social-icon" size="32" title="Telegram" />
+                      <FaTelegram
+                        className="social-icon"
+                        size="32"
+                        title="Telegram"
+                      />
                     </a>
                   )}
                   {social.email && (
@@ -106,7 +122,11 @@ class Home extends React.Component {
                       href={`mailto:${social.email}`}
                       title="Email"
                     >
-                      <FaEnvelope className="social-icon" size="32" title="Email" />
+                      <FaEnvelope
+                        className="social-icon"
+                        size="32"
+                        title="Email"
+                      />
                     </a>
                   )}
                 </div>

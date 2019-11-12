@@ -71,11 +71,7 @@ const GithubLink = styled(({ className }) => (
 `
 
 const BlogLink = styled(({ className }) => (
-  <a
-    className={className}
-    href="https://nikoheikkila.fi"
-    title="Blog"
-  >
+  <a className={className} href="https://nikoheikkila.fi" title="Blog">
     <FaPen size={28} title="Blog" />
   </a>
 ))`
