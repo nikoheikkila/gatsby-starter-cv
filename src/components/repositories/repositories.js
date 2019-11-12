@@ -97,8 +97,8 @@ export default styled(Repositories)`
   }
 
   .repositories-repo-date {
-    color: #bbb;
-    font-size: 10px;
+    color: #222;
+    font-size: 12px;
   }
 
   .repo-stargazers {

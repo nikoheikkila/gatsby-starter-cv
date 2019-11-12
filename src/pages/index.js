@@ -59,60 +59,54 @@ class Home extends React.Component {
                     <a
                       className="social-link devto"
                       href={social.devto}
-                      target="_blank"
-                      rel="me noopener noreferrer"
+                      title="DEV"
                     >
-                      <FaDev className="social-icon" size="32" />
+                      <FaDev className="social-icon" size="32" title="DEV" />
                     </a>
                   )}
                   {social.github && (
                     <a
                       className="social-link github"
                       href={social.github}
-                      target="_blank"
-                      rel="me noopener noreferrer"
+                      title="GitHub"
                     >
-                      <FaGithub className="social-icon" size="32" />
+                      <FaGithub className="social-icon" size="32" title="GitHub" />
                     </a>
                   )}
                   {social.mastodon && (
                     <a
                       className="social-link mastodon"
                       href={social.mastodon}
-                      target="_blank"
-                      rel="me noopener noreferrer"
+                      title="Mastodon"
                     >
-                      <FaMastodon className="social-icon" size="32" />
+                      <FaMastodon className="social-icon" size="32" title="Mastodon" />
                     </a>
                   )}
                   {social.linkedin && (
                     <a
                       className="social-link linkedin"
                       href={social.linkedin}
-                      target="_blank"
-                      rel="me noopener noreferrer"
+                      title="LinkedIn"
                     >
-                      <FaLinkedin className="social-icon" size="32" />
+                      <FaLinkedin className="social-icon" size="32" title="LinkedIn" />
                     </a>
                   )}
                   {social.telegram && (
                     <a
                       className="social-link telegram"
                       href={social.telegram}
-                      target="_blank"
-                      rel="me noopener noreferrer"
+                      title="Telegram"
                     >
-                      <FaTelegram className="social-icon" size="32" />
+                      <FaTelegram className="social-icon" size="32" title="Telegram" />
                     </a>
                   )}
                   {social.email && (
                     <a
                       className="social-link email"
                       href={`mailto:${social.email}`}
-                      target="_blank"
-                      rel="me noopener noreferrer"
+                      title="Email"
                     >
-                      <FaEnvelope className="social-icon" size="32" />
+                      <FaEnvelope className="social-icon" size="32" title="Email" />
                     </a>
                   )}
                 </div>

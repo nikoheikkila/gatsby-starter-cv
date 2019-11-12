@@ -52,10 +52,9 @@ const GithubLink = styled(({ className }) => (
   <a
     className={className}
     href={`https://github.com/${siteConfig.githubUsername}`}
-    target="_blank"
-    rel="noopener noreferrer"
+    title="GitHub"
   >
-    <FaGithub size={32} />
+    <FaGithub size={32} title="GitHub" />
   </a>
 ))`
   position: relative;
@@ -75,10 +74,9 @@ const BlogLink = styled(({ className }) => (
   <a
     className={className}
     href="https://nikoheikkila.fi"
-    target="_blank"
-    rel="noopener noreferrer"
+    title="Blog"
   >
-    <FaPen size={28} />
+    <FaPen size={28} title="Blog" />
   </a>
 ))`
   position: relative;
