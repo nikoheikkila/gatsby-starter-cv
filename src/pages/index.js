@@ -20,6 +20,7 @@ import Skills from '../components/skills'
 import Timeline from '../components/timeline'
 import Repositories from '../components/repositories'
 import Education from '../components/education'
+import Articles from '../components/articles'
 
 const Separator = styled.hr`
   margin-top: 24px;
@@ -37,6 +38,7 @@ class Home extends React.Component {
       authorDescription,
       skills,
       education,
+      devUsername,
     } = siteConfig
 
     return (
@@ -148,6 +150,8 @@ class Home extends React.Component {
             </Row>
             <Separator />
             <Timeline />
+            <Separator />
+            <Articles username={devUsername} theme="pink" />
             <Separator />
             <Repositories />
             <Separator />

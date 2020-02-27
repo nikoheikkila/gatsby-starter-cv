@@ -31,7 +31,7 @@ class Repositories extends React.Component {
     const { status } = this.state
     return (
       <div className={this.props.className}>
-        <h2>Selected Works</h2>
+        <h2>Open Source Projects</h2>
         {status === 'loading' && (
           <div className="repositories-loader">
             <Loader />
@@ -41,7 +41,7 @@ class Repositories extends React.Component {
           <React.Fragment>
             <div className="repositories-content">
               {this.state.repos
-                .filter(repo => !repo.fork && repo.stargazers_count > 0)
+                .filter(repo => !repo.fork && repo.stargazers_count > 1)
                 .sort(
                   (repo1, repo2) =>
                     repo2.stargazers_count - repo1.stargazers_count

@@ -4,6 +4,7 @@ module.exports = {
   keyWords: ['developer', 'curriculum'],
   authorName: 'Niko Heikkilä',
   githubUsername: 'nikoheikkila',
+  devUsername: 'nikoheikkila',
   authorAvatar: '/images/avatar.jpg',
   authorDescription: `
   ...and I make world a better place with well-crafted software.
@@ -34,7 +35,7 @@ module.exports = {
   education: [
     {
       institute: 'University of Jyväskylä',
-      degree: 'Master of Science',
+      degree: 'Games and Gamefulness',
       begin: '2014',
       end: '2016'
     },
