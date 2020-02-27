@@ -1,9 +1,5 @@
 {
     "version": 2,
-    "name": "cv.nikoheikkila.fi",
-    "alias": [
-        "cv.nikoheikkila.fi"
-    ],
     "builds": [
         {
             "src": "package.json",
