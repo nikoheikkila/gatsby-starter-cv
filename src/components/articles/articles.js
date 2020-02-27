@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import 'dev-widget'
+import Helmet from 'react-helmet'
 
 const widgetStyle = {
   textAlign: 'center',
@@ -26,6 +26,12 @@ export default ({
           data-limit={limit.toString()}
         ></dev-widget>
       </section>
+      <Helmet>
+        <script
+          src="https://unpkg.com/dev-widget@^1/dist/card.component.min.mjs"
+          type="module"
+        ></script>
+      </Helmet>
     </Fragment>
   )
 }
