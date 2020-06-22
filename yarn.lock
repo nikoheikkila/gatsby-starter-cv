@@ -12826,10 +12826,10 @@ rc@^1.2.7, rc@^1.2.8, rc@~1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-awesome-styled-grid@3.0.8:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/react-awesome-styled-grid/-/react-awesome-styled-grid-3.0.8.tgz#afac105b7cf6c2e5c25526cb4d88b224f030f8b0"
-  integrity sha512-nCnd/Fj4pqbl/xpZkgbZdWeZ/ncBhYuQkR/qxFCqGYTHpcD/zfVJKS/jPIUogJKTAnyxa69XKXnOu5braZNuQA==
+react-awesome-styled-grid@3.0.10:
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/react-awesome-styled-grid/-/react-awesome-styled-grid-3.0.10.tgz#b51b7ec7444487d3ce9ddcc9f1b9517bcfbd470d"
+  integrity sha512-YNzFiDCwehC6v5z7eYwUiSm6MhoxqNJcSFSFQMnStDlDpqINmj/WYDxvyY8mG3iHdaSsBLAWn3CjmFc4k2dyNw==
 
 react-clientside-effect@^1.2.2:
   version "1.2.2"
