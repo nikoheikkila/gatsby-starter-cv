@@ -84,6 +84,7 @@ class Home extends React.Component {
                       className="social-link mastodon"
                       href={social.mastodon}
                       title="Mastodon"
+                      rel="me"
                     >
                       <FaMastodon
                         className="social-icon"

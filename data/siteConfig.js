@@ -13,7 +13,7 @@ module.exports = {
   skills: [
     {
       name: 'DevOps Culture',
-      level: 85
+      level: 90
     },
     {
       name: 'Team Leadership',
@@ -21,15 +21,15 @@ module.exports = {
     },
     {
       name: 'Continuous Integration & Delivery',
-      level: 80
+      level: 95
     },
     {
       name: 'Software Architecture & Design',
-      level: 88
+      level: 90
     },
     {
-      name: 'Effective Communication',
-      level: 82
+      name: 'Communication Skills',
+      level: 85
     },
   ],
   education: [
@@ -48,6 +48,18 @@ module.exports = {
   ],
   jobs: [
     {
+      company: "Futurice",
+      begin: {
+        month: 'Aug',
+        year: '2020'
+      },
+      occupation: 'Software Engineer',
+      description: `
+      Co-creating the future and making sure the clients are satisfied with top-quality
+      solutions related to modern digital services.
+      `
+    },
+    {
       company: "Paytrail",
       begin: {
         month: 'Nov',
@@ -55,9 +67,7 @@ module.exports = {
       },
       occupation: "Lead Developer",
       description: `
-      I'm leading a highly skilled development team focused on building modern Laravel
-      microservices to provide a platform for online payments and merchant services.
-      I'm also actively involved in hiring and onboarding of new developers.
+      I led a highly skilled development team focused on building modern Laravel microservices to provide a Nordic platform for online payments and merchant services. I also actively involved myself in recruiting candidates, mentoring new developers, and building CI/CD platforms. I kickstarted and organized the open-source production and community in Paytrail aimed at providing the best open-source tools for the merchants to use.
       `
     }, {
       company: "University of Jyväskylä",
