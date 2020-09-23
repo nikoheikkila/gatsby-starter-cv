@@ -22,7 +22,8 @@
     "react-helmet": "6.1.0",
     "react-icons": "3.10.0",
     "simple-json-fetch": "1.0.1",
-    "styled-components": "5.1.1"
+    "styled-components": "5.1.1",
+    "snyk": "^1.399.1"
   },
   "keywords": [
     "gatsby",
@@ -35,7 +36,9 @@
     "dev": "gatsby develop -p 5000",
     "start": "yarn develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "devDependencies": {
     "npm-check-updates": "^7.0.1",
@@ -47,5 +50,6 @@
   },
   "bugs": {
     "url": "https://github.com/nikoheikkila/gatsby-starter-cv/issues"
-  }
+  },
+  "snyk": true
 }
