@@ -22,7 +22,7 @@
     "react-helmet": "6.1.0",
     "react-icons": "3.11.0",
     "simple-json-fetch": "1.0.1",
-    "styled-components": "5.2.0",
+    "styled-components": "5.2.1",
     "snyk": "^1.399.1"
   },
   "keywords": [
