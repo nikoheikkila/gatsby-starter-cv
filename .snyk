@@ -1344,3 +1344,11 @@ patch:
         patched: '2020-09-23T15:37:38.195Z'
     - gatsby > gatsby-cli > gatsby-recipes > @mdx-js/runtime > @mdx-js/mdx > remark-mdx > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
         patched: '2020-09-23T15:37:38.195Z'
+    - gatsby > gatsby-cli > gatsby-recipes > remark-mdxjs > @babel/core > @babel/helpers > @babel/traverse > lodash:
+        patched: '2021-02-26T08:53:58.315Z'
+    - gatsby > gatsby-cli > gatsby-recipes > remark-mdxjs > @babel/core > @babel/helpers > @babel/traverse > @babel/generator > lodash:
+        patched: '2021-02-26T08:53:58.315Z'
+    - gatsby > gatsby-cli > gatsby-recipes > remark-mdxjs > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2021-02-26T08:53:58.315Z'
+    - gatsby > gatsby-cli > gatsby-recipes > remark-mdxjs > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2021-02-26T08:53:58.315Z'
