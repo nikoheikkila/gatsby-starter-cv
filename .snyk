@@ -1352,3 +1352,5 @@ patch:
         patched: '2021-02-26T08:53:58.315Z'
     - gatsby > gatsby-cli > gatsby-recipes > remark-mdxjs > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
         patched: '2021-02-26T08:53:58.315Z'
+    - snyk > snyk-python-plugin > snyk-poetry-lockfile-parser > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2021-02-26T13:35:17.417Z'
