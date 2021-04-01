@@ -23,7 +23,7 @@
     "react-icons": "3.11.0",
     "simple-json-fetch": "1.0.1",
     "styled-components": "5.2.0",
-    "snyk": "^1.460.0"
+    "snyk": "^1.518.0"
   },
   "keywords": [
     "gatsby",
